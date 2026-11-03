@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conduite</title>
+    <link rel="stylesheet" href="conduite.css">
+    <link rel="icon" type="image/png" href="conduite.png">
+</head>
+<body>
+<div class="container">
+    <h1 id="pageTitle"><span class="car-emoji">💼</span> Alternance</h1>
+    <div class="nav-buttons">
+        <button class="nav-btn active" onclick="showSection('alternance', this)">Alternance</button>
+        <button class="nav-btn" onclick="showSection('voiture', this)">Voiture</button>
+    </div>
+    <div id="alternance" class="section active">
+        <h2 class="alt-section-title">📍 Lieux &amp; distances</h2>
+        <div class="table-scroll-wrapper">
+            <table class="data-table lieux" id="lieuxTable">
+                <thead><tr><th>Lieu</th><th>Ville</th><th>Aller</th><th>A/R</th><th>Temps aller</th><th>Temps A/R</th><th>kWh/100</th></tr></thead>
+                <tbody id="lieuxBody"></tbody>
+            </table>
+        </div>
+        <hr class="alt-divider">
+        <h2 class="alt-section-title">📅 Répartition des jours</h2>
+        <div class="table-scroll-wrapper">
+        <table class="data-table jours">
+            <thead><tr><th>Période</th><th>🏫 École</th><th>🏢 Entreprise</th><th>🏖️ Congès</th><th>🏠 Repos</th></tr></thead>
+            <tbody id="repartitionBody"></tbody>
+        </table>
+        </div>
+        <hr class="alt-divider">
+        <h2 class="alt-section-title">🧭 Kilométrage prévu sur 2 ans</h2>
+        <div class="calc-results" id="kmResults"></div>
+        <hr class="alt-divider">
+        <h2 class="alt-section-title">⛽ Coût des déplacements sur 2 ans</h2>
+        <div class="calc-results" id="fuelResults"></div>
+        <hr class="alt-divider">
+        <h2 class="alt-section-title">📅 Calendrier d'alternance</h2>
+            <div id="calendrierWrap"></div>
+        </div>
+    <div id="voiture" class="section-voiture">
+        <div class="voiture-cards" id="voitureCards"></div>
+    </div>
+    </div>
+    <div id="mentionsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2>📄 Mentions légales</h2>
+      <p><strong>Éditeur du site</strong><br>
+      <span class="contact-inline">Loris GOUHIER - lorisgouhier@gmail.com</span><br>
+      Site personnel sans but commercial, réalisé à des fins de présentation et de développement web.</p>
+      <p><strong>Hébergeur/Diffusion/Domaine</strong><br>
+      GitHub Inc, 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.<br>
+      Cloudflare Inc, 101 Townsend Street, San Francisco, CA 94107, États-Unis.<br>
+      OVH SAS, 2 Rue Kellermann, 59100 Roubaix, France.</p>
+      <p><strong>Propriété intellectuelle</strong><br>
+      L'ensemble du contenu présent sur ce site (textes, images, codes sources, etc) est la propriété exclusive de Loris GOUHIER.
+      Conformément à l'article L.122-4 du Code de la propriété intellectuelle,
+      toute reproduction, représentation, même partielle est interdite sans autorisation préalable.</p>
+      <p><strong>Données personnelles</strong><br>
+      Ce site ne collecte aucune donnée personnelle ni aucun cookie de suivi.<br>
+      GitHub et Cloudflare peuvent traiter votre adresse IP pour le fonctionnement et la sécurité du site.</p>
+    <p class="maj-line">Site web et mentions légales mis à jour le <b>03/11/2026</b>.</p>
+        </div>
+    </div>
+  </div>
+  <footer>
+    <p>© 2026 | Tous droits réservés | <a onclick="openModal()">Mentions légales</a></p>
+  </footer>
+  <script src="conduite.js"></script>
+</body>
+</html>
